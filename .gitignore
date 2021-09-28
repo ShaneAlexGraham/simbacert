@@ -1,0 +1,9 @@
+*/.idea
+*/.vscode
+*.user
+coverage.out
+coverage.html
+coverage-summary.txt
+build/*
+certs/*
+!build/Makefile

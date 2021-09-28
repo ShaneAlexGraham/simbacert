@@ -1,0 +1,41 @@
+organization: 'PerkinElmer'
+organizational-unit: 'PKI(Simplicity)'
+ca:
+  CAROOT: './certs'
+  common-name: 'PKI(Simplicity) Certificate'
+  cert-name: ca-cert.pem
+  key-name: ca-key.pem
+  p12-file: ''
+  csr-path: ''
+  pkcs12: false
+  ecdsa: false
+certificates:
+  - name: server
+    type: server
+    cert-file: ./certs/server-cert.pem
+    key-file: ./certs/server-key.pem
+    p12-file: ''
+    csr-path: ''
+    pkcs12: false
+    ecdsa: false
+    include-network: true
+    hosts:
+      - localhost
+      - '::1'
+      - pki-simba.localhost
+      - 127.0.0.1
+  - name: client
+    type: client
+    cert-file: ./certs/client-cert.pem
+    key-file: ./certs/client-key.pem   
+    p12-file: ''
+    csr-path: ''
+    include-network: true
+    pkcs12: false
+    ecdsa: false   
+    hosts:
+      - localhost
+      - '::1'
+      - pki-simba.localhost
+      - 127.0.0.1
+      - email@pki-simba.localhost

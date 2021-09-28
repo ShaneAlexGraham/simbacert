@@ -1,0 +1,7 @@
+certificates:
+  - type: server
+    hosts:
+      - 127.0.0.1
+  - type: client
+    hosts:
+      - 127.0.0.1
